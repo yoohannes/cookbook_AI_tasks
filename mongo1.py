@@ -1,5 +1,6 @@
 import pymongo
 import dns
+#just playing around with mongodb#
 client = pymongo.MongoClient("mongodb+srv://yohannes:yohannes@cluster0.ehkjm.mongodb.net/student_db?retryWrites=true&w=majority")
 #db=client.get_database('sample_airbnb')
 print(client.list_database_names())
