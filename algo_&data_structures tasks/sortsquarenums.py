@@ -1,15 +1,24 @@
-nums=[-4,-1,0,3,10]
-nums = [i * i for i in nums
-for i in range(len(nums) - 1):
+nums = [-5, -3, -2, -1]
+nums = [i * i for i in nums]
 
-    for j in range(len(nums) - i - 1):
-        if (nums[i + 1] != None):
+print(nums)
 
-            if nums[i] > nums[j + 1]:
-                temp=nums[j+1]
-                nums[j + 1] = nums[i]
+
+def sortsquare(nums):
+    for i in range(len(nums) - 1):
+        if nums[i + 1] is not None:
+
+            if nums[i] > nums[i + 1]:
+                temp = nums[i + 1]
+                nums[i + 1] = nums[i]
                 nums[i] = temp
-
             else:
                 continue
-print(nums)
+        if i > 0 and nums[i - 1] > nums[i]:
+            sortsquare(nums)
+
+    return print(nums)
+
+
+
+sortsquare(nums)
